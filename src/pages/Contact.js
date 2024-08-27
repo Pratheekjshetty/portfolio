@@ -28,9 +28,9 @@ export default function Contact() {
       return; 
     } else {
       emailjs
-        .sendForm("service_rdj3dx6", "template_zj26c4c", form.current, {
-          publicKey: "AlgqYjU3FGOYDfgHv",
-        })
+        .sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, 
+          process.env.REACT_APP_PUBLIC_KEY,
+        )
         .then(
           () => {
             toast.success("Email sent successfully!");
@@ -58,13 +58,13 @@ export default function Contact() {
             component="form" noValidate onSubmit={sendEmail} ref={form} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12}>
-                <TextField autoComplete="given-name" name="firstName" required fullWidth id="from_name" label="Name" autoFocus onChange={(e) => setName(e.target.value)}/>
+                <TextField autoComplete="given-name" name="first_name" required fullWidth id="name" label="Name" autoFocus onChange={(e) => setName(e.target.value)}/>
               </Grid>
               <Grid item xs={12}>
-                <TextField required fullWidth id="email" label="Email Address" name="from_name" autoComplete="email" onChange={(e) => setEmail(e.target.value)}/>
+                <TextField required fullWidth id="email" label="Email Address" name="reply_to" autoComplete="email" onChange={(e) => setEmail(e.target.value)}/>
               </Grid>
               <Grid item xs={12}>
-                <TextField required fullWidth name="message" label="Message" multiline rows={6} autoComplete="new-password" onChange={(e) => setMessage(e.target.value)}/>
+                <TextField required fullWidth name="message" label="Message" multiline rows={6}  onChange={(e) => setMessage(e.target.value)}/>
               </Grid>
             </Grid>
             <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}> Submit </Button>
