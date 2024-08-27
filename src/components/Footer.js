@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/pratheek.png";
+import logo from "../assets/White_logo1.png";
 import XIcon from "@mui/icons-material/X";
 import LanguageIcon from "@mui/icons-material/Language";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -13,8 +13,8 @@ function Footer() {
     <div>
       <div className="w-full bg-[rgb(110,7,243)] h-[480px] text-[#FFFFFF] flex justify-center items-center flex-col gap-10 mt-10">
         <Link to="/">
-          <div className="w-[70px]">
-            <img src={logo} alt="" />
+          <div className="w-[100px]">
+            <img src={logo} alt="logo"/>
           </div>
         </Link>
         <div className="font-eurostile sm:text-[22px] text-[18px] font-extrabold text-center mx-10 sm:mx-0 sm:w-[600px] ">
