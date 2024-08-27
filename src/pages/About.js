@@ -90,7 +90,6 @@ function About() {
                   MongoDB<br /> 
                   Axios<br /> 
                   GitHub<br />
-                  Tailwind CSS<br/>
                 </div>
                 <div>
                   Mongoose<br />
